@@ -8,7 +8,7 @@ class PatientController {
 
   login = async (req, res, next) => {
     try {
-      // const newUser = await this.#models.User.findOne()
+      //const newPatient = await this.#models.Patient.findOne();
       if (true) throw new ApiError("error message", 403);
 
       res.status(200).json("youpi");
