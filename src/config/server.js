@@ -22,7 +22,7 @@ class Server {
 
   start(port) {
     this.#http.listen(port, () => {
-      console.log("server started" + port);
+      console.log("server started " + port);
     });
   }
 }

@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node app.js"  },
+    "start": "nodemon --exec babel-node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shsimplon/We-care.git"
@@ -19,9 +20,12 @@
   "homepage": "https://github.com/shsimplon/We-care#readme",
   "dependencies": {
     "babel": "^6.23.0",
+    "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "morgan": "^1.10.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.0-alpha.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {

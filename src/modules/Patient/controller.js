@@ -1,6 +1,6 @@
 import ApiError from "../../helpers/ApiError.js";
 
-class UserController {
+class PatientController {
   #models;
   constructor(models) {
     this.#models = models;
@@ -18,4 +18,4 @@ class UserController {
   };
 }
 
-export default UserController;
+export default PatientController;

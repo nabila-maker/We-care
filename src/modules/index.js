@@ -1,7 +1,7 @@
-import UserRouter from "./User/index.js";
+import PatientRouter from "./Patient/index.js";
 
 const routes = {
-  "/users": UserRouter,
+  "/patients": PatientRouter,
 };
 
 export default routes;
