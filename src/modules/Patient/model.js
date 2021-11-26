@@ -1,6 +1,8 @@
 import pkg from 'sequelize';
 const { Model, DataTypes } = pkg;
+import User from '../User/model.js';
 import db from "../../config/db.js";
+
 
 class Patient extends Model {
   static init(sequelize) {
@@ -8,8 +10,8 @@ class Patient extends Model {
       {
         name: DataTypes.STRING,
         last_name: DataTypes.STRING,
-        email: DataTypes.STRING,
-        password: DataTypes.STRING,
+        //email: DataTypes.STRING,
+        //password: DataTypes.STRING,
         number_security: DataTypes.STRING,
       },
       { sequelize, modelName: "Patient" }
