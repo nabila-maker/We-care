@@ -9,14 +9,15 @@ class ConsultationController {
 
   add= async (req, res, next) => {
     try {
-        const book = await this.#models.Consultation.create({ ...req.body });
-        res.status(201).json(book);
+        const consultation = await this.#models.Consultation.create({ ...req.body });
+        res.status(201).json(consultation);
     } catch (err) {
         next(err);
     }
 }
 
-getOne= async (id) => {
+getOne= async (req, res, next) => {
+    const id=req.body.id;
     const consultation = await this.#models.Consultation.findAll({
          where: {
              id
@@ -28,7 +29,7 @@ getOne= async (id) => {
          throw new ApiError("Ressource not exists");
      }
 
-     return consultation;
+     res.status(201).json(consultation);
  }
 
  update= async (id, data) => {
@@ -48,10 +49,10 @@ getOne= async (id) => {
       attributes: {exclude: ["dateCreated"]},
     }); 
 
-    return consultation;
+    res.status(201).json(consultation);
   }
    
-  deleteOption= async (id, data) => {
+  delete= async (id, data) => {
     const consultationFound = await this.#models.Consultation.findOne({
       where: { id },
     });
@@ -61,7 +62,8 @@ getOne= async (id) => {
    
     await consultationFound.delete();
 
-    return consultationFound;
+    res.status(201).json(consultationFound);
+}
   }
 
 
