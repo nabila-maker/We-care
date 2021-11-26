@@ -1,3 +1,4 @@
+
 import pkg from 'sequelize';
 const { Model, DataTypes } = pkg;
 import User from '../User/model.js';
