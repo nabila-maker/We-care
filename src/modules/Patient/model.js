@@ -1,6 +1,6 @@
-import { Model, DataTypes } from "sequelize";
 import db from "../../config/db.js";
-
+import pkg from "sequelize";
+const { Model, DataTypes } = pkg;
 class Patient extends Model {
   static init(sequelize) {
     return super.init(
