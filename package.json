@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/shsimplon/We-care#readme",
   "dependencies": {
-    "babel": "^6.23.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",

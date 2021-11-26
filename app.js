@@ -17,7 +17,7 @@ server.errorHandler(errorHandler);
     await db.sequelize.sync({ alter: true, force: true });
   } catch (e) {
     console.error(e);
-    logger.log("warn", e.message);
+    
   }
 })();
 server.start(env.app_port);
